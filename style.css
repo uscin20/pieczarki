@@ -95,16 +95,8 @@ body {
     background: #6a1b9a; /* ten sam fiolet */
     color: white;
     text-align: center;
-    padding: 10px;
     font-size: 14px;
 }
-
-/* ===== RESPONSYWNOŚĆ ===== */
-@media (max-width: 480px) {
-    .quiz {
-        padding: 20px;
-    }
-
     .header {
         padding: 0 15px;
     }
