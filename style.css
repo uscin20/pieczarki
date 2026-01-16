@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+/* ===== LAYOUT GŁÓWNY ===== */
 body {
     margin: 0;
     min-height: 100vh;
@@ -13,29 +14,37 @@ body {
 
 /* ===== HEADER ===== */
 .header {
-    background: #1f1f1f;
+    background: #6a1b9a; /* fiolet */
     color: white;
-    padding: 15px 30px;
+    height: 60px;
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    padding: 0 20px;
 }
 
+/* logo po lewej */
 .header .logo {
     font-weight: bold;
-    font-size: 18px;
+    z-index: 2;
 }
 
+/* tytuł IDEALNIE na środku */
 .header .title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 18px;
+    font-weight: 500;
 }
 
-/* ===== MAIN (CENTROWANIE) ===== */
+/* ===== MAIN (CENTROWANIE + FOOTER NA DOLE) ===== */
 .main {
-    flex: 1;
+    flex: 1; /* TO JEST KLUCZ */
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 /* ===== QUIZ ===== */
@@ -81,9 +90,9 @@ body {
     font-weight: bold;
 }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER (ZAWSZE NA DOLE) ===== */
 .footer {
-    background: #1f1f1f;
+    background: #6a1b9a; /* ten sam fiolet */
     color: white;
     text-align: center;
     padding: 10px;
@@ -93,12 +102,10 @@ body {
 /* ===== RESPONSYWNOŚĆ ===== */
 @media (max-width: 480px) {
     .quiz {
-        margin: 15px;
         padding: 20px;
     }
 
-    .header,
-    .footer {
-        padding: 12px 15px;
+    .header {
+        padding: 0 15px;
     }
 }
