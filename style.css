@@ -44,7 +44,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
 }
 
 /* ===== QUIZ ===== */
@@ -98,6 +98,13 @@ body {
     padding: 10px;
     font-size: 14px;
 }
+
+/* ===== RESPONSYWNOŚĆ ===== */
+@media (max-width: 480px) {
+    .quiz {
+        padding: 20px;
+    }
+
     .header {
         padding: 0 15px;
     }
