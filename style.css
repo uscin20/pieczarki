@@ -37,10 +37,10 @@ body {
     border: 3px solid #441057;
 }
 .header .logor {
-    height: 40px;
+    height: 35px;
     display: block !important;
     position: absolute !important;
-    right: 25px !important;
+    right: 20px !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
     z-index: 10;
