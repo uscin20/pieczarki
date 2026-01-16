@@ -20,8 +20,31 @@
     <p style="font-family: courier; font-size: 20px; font-weigt: bold; text-align: center;">
         Witaj w grze! Twoim celem będzie znalezienie 4 kodów QR takich jak ten, który właśnie zeskanował*ś. Po zeskanowaniu każdego z nich staniesz przed pytaniem 
         dotyczącym ośrodka wypoczynkowego Pałacu Młodzieży w Pieczarkach. Po wybraniu odpowiedzi wyświetli się cyfra. Zapamiętaj ją, oraz która to odpowiedź
-        lub zapisz, to ważne!<br>Po zebraniu wszystkich 4 elementów wróć tutaj, kliknij przycisk poniżej i wpisz hasło.<br>Powodzenia!
+        lub zapisz, to ważne!<br>Po zebraniu wszystkich 4 elementów wróć tutaj i wpisz hasło w polu poniżej.<br>Powodzenia!
     </p>
+    <br>
+    <div class="password-check">
+    <input type="text" id="password" placeholder="****">
+    <button onclick="checkPassword()">Sprawdź</button>
+</div>
+
+<script>
+    // Tutaj wpisz swoje hasło
+    const correctPassword = "1955";
+
+    function checkPassword() {
+        const userInput = document.getElementById("password").value;
+
+        if(userInput === correctPassword) {
+            // Jeśli hasło poprawne, przekieruj
+            window.location.href = "win";
+        } else {
+            // Jeśli złe, pokaż alert
+            alert("Spróbuj jeszcze raz.");
+        }
+    }
+</script>
+
 </div>
 
 <div class="footer">
