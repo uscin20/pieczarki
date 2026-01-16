@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="quiz">
+    <h2>Jaką liczbę wybierasz?</h2>
+
+    <div class="answers">
+        <label>
+            <input type="radio" name="answer" onclick="showNumber(1)">
+            Odpowiedź A
+        </label>
+
+        <label>
+            <input type="radio" name="answer" onclick="showNumber(2)">
+            Odpowiedź B
+        </label>
+
+        <label>
+            <input type="radio" name="answer" onclick="showNumber(3)">
+            Odpowiedź C
+        </label>
+    </div>
+
+    <div class="result" id="result">
+        <!-- tutaj pojawi się cyfra -->
+    </div>
+</div>
+
+<script>
+    function showNumber(number) {
+        document.getElementById("result").textContent = number;
+    }
+</script>
+
+</body>
+</html>
