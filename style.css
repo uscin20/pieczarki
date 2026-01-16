@@ -89,6 +89,7 @@ body {
     font-size: 32px;
     font-weight: bold;
     border: 5px solid grey;
+    padding: 10px;
 }
 
 /* ===== FOOTER (ZAWSZE NA DOLE) ===== */
@@ -97,7 +98,7 @@ body {
     color: white;
     text-align: center;
     padding: 10px;
-    font-size: 14px;
+    font-size: 10px;
 }
 
 /* ===== RESPONSYWNOŚĆ ===== */
