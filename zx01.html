@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Grzybobranie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="script.js"></script>
+<div class="header">
+    <div class="logo"><img src=""></div>
+    <div class="title">Grzybobranie</div>
+</div>
+
+<div class="main">
+    <div class="quiz">
+    <h2>Jaką liczbę wybierasz?</h2>
+
+    <div class="answers">
+        <label>
+            <input type="radio" name="answer" onclick="showNumber(1, this)">
+            Odpowiedź A
+        </label>
+
+        <label>
+            <input type="radio" name="answer" onclick="showNumber(2, this)">
+            Odpowiedź B
+        </label>
+
+        <label>
+            <input type="radio" name="answer" onclick="showNumber(3, this)">
+            Odpowiedź C
+        </label>
+    </div>
+</div>
+
+    <div class="result" id="result">
+        <!-- tutaj pojawi się cyfra -->
+    </div>
+</div>
+<script>
+    let selected = null;
+
+    function showNumber(number, element) {
+        if (selected === element) {
+            element.checked = false;
+            selected = null;
+            document.getElementById("result").textContent = "";
+        } else {
+            selected = element;
+            document.getElementById("result").textContent = number;
+        }
+    }
+</script>
+
+<div class="footer">
+    © 2026 Wiktor Uścinowicz
+</div>
+</body>
+</html>
