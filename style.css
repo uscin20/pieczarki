@@ -34,6 +34,7 @@ body {
 .header .logo {
     width: 40px;
     height: 40px;
+    border: 3px solid #441057;
 }
 /* ===== MAIN (CENTROWANIE + FOOTER NA DOLE) ===== */
 .main {
@@ -42,7 +43,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    flex-direction: column !important;
+    flex-direction: column;
 }
 
 /* ===== QUIZ ===== */
