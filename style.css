@@ -23,12 +23,6 @@ body {
     padding: 0 20px;
 }
 
-/* logo po lewej */
-.header .logo {
-    width: 20px;
-    height: 20px;
-}
-
 /* tytuł IDEALNIE na środku */
 .header .title {
     position: absolute;
