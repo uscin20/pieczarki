@@ -13,47 +13,6 @@
     <div class="title">Grzybobranie</div>
 </div>
 
-<div class="main">
-    <div class="quiz">
-    <h2>Jaką liczbę wybierasz?</h2>
-
-    <div class="answers">
-        <label>
-            <input type="radio" name="answer" onclick="showNumber(1, this)">
-            Odpowiedź A
-        </label>
-
-        <label>
-            <input type="radio" name="answer" onclick="showNumber(2, this)">
-            Odpowiedź B
-        </label>
-
-        <label>
-            <input type="radio" name="answer" onclick="showNumber(3, this)">
-            Odpowiedź C
-        </label>
-    </div>
-</div>
-
-    <div class="result" id="result">
-        <!-- tutaj pojawi się cyfra -->
-    </div>
-</div>
-<script>
-    let selected = null;
-
-    function showNumber(number, element) {
-        if (selected === element) {
-            element.checked = false;
-            selected = null;
-            document.getElementById("result").textContent = "";
-        } else {
-            selected = element;
-            document.getElementById("result").textContent = number;
-        }
-    }
-</script>
-
 <div class="footer">
     © 2026 Wiktor Uścinowicz
 </div>
