@@ -39,6 +39,7 @@ body {
 .header .logor {
     height: 50px;
     margin-left: auto;
+    right: 0;
 }
 /* ===== MAIN (CENTROWANIE + FOOTER NA DOLE) ===== */
 .main {
