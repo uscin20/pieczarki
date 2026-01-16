@@ -25,8 +25,8 @@ body {
 
 /* logo po lewej */
 .header .logo {
-    font-weight: bold;
-    z-index: 2;
+    width: 20px;
+    height: 20px;
 }
 
 /* tytuł IDEALNIE na środku */
