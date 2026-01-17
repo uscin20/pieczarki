@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Grzybobranie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="pieczarka.png" type="image/x-icon">
+    <style>
+      #odliczanie {
+  font-size: 2em;
+  color: #333;
+  text-align: center;
+}
+
+    </style>
+</head>
+<body>
+<script src="script.js"></script>
+<div class="header">
+    <a href="index"><img src="pieczarka.png" class="logo"></a>
+    <div class="title">Grzybobranie</div>
+    <a href="admin"><img src="pmka.png" class="logor"></a>
+</div>
+
+<div class="main">
+    <h1>Gratulacje!</h1>
+<p style="font-family: courier; font-size: 20px; text-align: center;">
+  Gratulacje! Udało ci się ukończyć grę. Jeżeli to czytasz to oznacza, że udało ci się prawidłowo odpowiedzieć na wszystkie pytania. Lecz czy znasz odpowiedź na ostatnie?<br>
+  <strong>Co oznacza hasło, czyli do wydarzyło się w 1955?</strong><br> Dziękuję za udział. Mam nadzieję, że podobało Ci się i jesteś głodn* więcej przygód.
+</p>
+<h3>ciąg dalszy nastąpi...</h3>
+<div id="odliczanie"></div>
+<script>
+let dataDocelowa = new Date("2026-09-01T00:00:00").getTime(); <!-- Ustaw swoją datę -->
+let x = setInterval(function() {
+  let teraz = new Date().getTime();
+  let odleglosc = dataDocelowa - teraz;
+  let dni = Math.floor(odleglosc / (1000 * 60 * 60 * 24));
+  let godziny = Math.floor((odleglosc % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minuty = Math.floor((odleglosc % (1000 * 60 * 60)) / (1000 * 60));
+  let sekundy = Math.floor((odleglosc % (1000 * 60)) / 1000);
+  document.getElementById("odliczanie").innerHTML = dni + "d " + godziny + "h " + minuty + "m " + sekundy + "s ";
+  if (odleglosc < 0) {
+    clearInterval(x);
+    document.getElementById("odliczanie").innerHTML = "Zakończone!";
+  }
+}, 1000);
+</script>
+</div>
+
+<div class="footer">
+    © 2026 Wiktor Uścinowicz
+</div>
+</body>
+</html>
