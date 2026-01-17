@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Grzybobranie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="pieczarka.png" type="image/x-icon">
+</head>
+<body>
+<script src="script.js"></script>
+<div class="header">
+    <img src="pieczarka.png" class="logo">
+    <div class="title">Grzybobranie</div>
+    <img src="pmka.png" class="logor">
+</div>
+
+<div class="main">
+    <h1>Administracja</h1>
+    <div id="login">
+    <input type="password" id="password">
+    <button onclick="checkPassword()">Zaloguj</button>
+</div>
+
+<div id="content" style="display:none;"> // zawartość pod hasłem
+<a href="galeria.html">-galeria</a>
+</div>
+</div>
+<script>
+if (localStorage.getItem("access") === "true") {
+    document.getElementById("content").style.display = "block";
+    document.getElementById("login").style.display = "none";
+}
+
+function checkPassword() {
+    if (document.getElementById("password").value === "Popomocy") {
+        localStorage.setItem("access", "true");
+        location.reload();
+    } else {
+        alert("Błędne hasło");
+    }
+}
+</script>
+
+<div class="footer">
+    © 2026 Wiktor Uścinowicz
+</div>
+</body>
+</html>
