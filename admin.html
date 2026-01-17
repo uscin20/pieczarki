@@ -35,19 +35,19 @@
 </div>
 </div>
 <script>
-if (localStorage.getItem("access") === "true") {
-    document.getElementById("content").style.display = "block";
-    document.getElementById("login").style.display = "none";
-}
+document.getElementById("content").style.display = "none";
+document.getElementById("login").style.display = "block";
 
 function checkPassword() {
     if (document.getElementById("password").value === "Pomocy7") {
-        localStorage.setItem("access", "true");
-        location.reload();
+        // zamiast zapisu i reload
+        document.getElementById("content").style.display = "block";
+        document.getElementById("login").style.display = "none";
     } else {
         alert("Błędne hasło");
     }
 }
+
 </script>
 
 <div class="footer">
