@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Grzybobranie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="pieczarka.png" type="image/x-icon">
+</head>
+<body>
+<script src="script.js"></script>
+<div class="header">
+    <a href="index"><img src="pieczarka.png" class="logo"></a>
+    <div class="title">Grzybobranie</div>
+    <a href="admin"><img src="pmka.png" class="logor"></a>
+</div>
+
+<div class="main">
+   <div class="gallery">
+    <img src="img1.jpg" onclick="openLightbox(this.src)">
+    <img src="img2.jpg" onclick="openLightbox(this.src)">
+    <img src="img3.jpg" onclick="openLightbox(this.src)">
+    <img src="img4.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+</div>
+
+<script>
+function openLightbox(src) {
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox").style.display = "flex";
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</div>
+
+<div class="footer">
+    © 2026 Wiktor Uścinowicz
+</div>
+</body>
+</html>
