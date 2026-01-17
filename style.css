@@ -111,13 +111,6 @@ body {
     padding: 10px;
     font-size: 10px;
 }
-
-/* ===== RESPONSYWNOŚĆ ===== */
-@media (max-width: 480px) {
-    .quiz {
-        padding: 20px;
-    }
-
     .header {
         padding: 0 15px;
     }
