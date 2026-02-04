@@ -144,3 +144,8 @@ body {
 .password-check button:hover {
     background-color: #7b1fa2;
 }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
