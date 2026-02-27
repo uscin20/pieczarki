@@ -18,7 +18,7 @@
 <div class="main">
     <img src="radioqr.png" style="height:250px;">
     <h1>Instrukcja gry</h1>
-    <p style="font-family: courier; font-size: 20px; font-weigt: bold; text-align: center;">
+   <!-- <p style="font-family: courier; font-size: 20px; font-weigt: bold; text-align: center;">
         Witaj w grze! Twoim celem będzie znalezienie 4 kodów QR takich jak ten, który właśnie zeskanował*ś. Po zeskanowaniu każdego z nich staniesz przed pytaniem 
         dotyczącym ośrodka wypoczynkowego Pałacu Młodzieży w Pieczarkach. Po wybraniu odpowiedzi wyświetli się cyfra. Zapamiętaj ją, oraz która to odpowiedź
         lub zapisz, to ważne! Pamiętaj, żeby nie psuć innym zabawy i wyrównać szanse nie dziel się odpowiedziami. Również uprasza się o niezdejmowanie kodów z 
@@ -38,17 +38,34 @@
         const userInput = document.getElementById("password").value;
 
         if(userInput === correctPassword) {
-            // Jeśli hasło poprawne, przekieruj
             window.location.href = "win.html";
         } else {
-            // Jeśli złe, pokaż alert
             alert("Spróbuj jeszcze raz.");
         }
     }
 </script>
 
 </div>
-
+-->
+    
+<div id="odliczanie"></div>
+<script>
+let dataDocelowa = new Date("2026-02-28T10:00:00").getTime(); <!-- Ustaw swoją datę -->
+let x = setInterval(function() {
+  let teraz = new Date().getTime();
+  let odleglosc = dataDocelowa - teraz;
+  let dni = Math.floor(odleglosc / (1000 * 60 * 60 * 24));
+  let godziny = Math.floor((odleglosc % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minuty = Math.floor((odleglosc % (1000 * 60 * 60)) / (1000 * 60));
+  let sekundy = Math.floor((odleglosc % (1000 * 60)) / 1000);
+  document.getElementById("odliczanie").innerHTML = dni + "d " + godziny + "h " + minuty + "m " + sekundy + "s ";
+  if (odleglosc < 0) {
+    clearInterval(x);
+    document.getElementById("odliczanie").innerHTML = "Zakończone!";
+  }
+}, 1000);
+</script>
+    
 <div class="footer">
     © 2026 Wiktor Uścinowicz
 </div>
