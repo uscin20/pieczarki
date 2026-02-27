@@ -16,6 +16,7 @@
 </div>
 
 <div class="main">
+<!--
     <div class="quiz">
     <h2>3. Ile masztów stoi na górce?</h2>
 
@@ -38,7 +39,6 @@
 </div>
     <div class="result" id="result">
     </div>
-</div>
 <script>
     let selected = null;
 
@@ -53,6 +53,26 @@
         }
     }
 </script>
+-->
+    <div id="odliczanie"></div>
+<script>
+let dataDocelowa = new Date("2026-02-28T10:00:00").getTime(); <!-- Ustaw swoją datę -->
+let x = setInterval(function() {
+  let teraz = new Date().getTime();
+  let odleglosc = dataDocelowa - teraz;
+  let dni = Math.floor(odleglosc / (1000 * 60 * 60 * 24));
+  let godziny = Math.floor((odleglosc % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minuty = Math.floor((odleglosc % (1000 * 60 * 60)) / (1000 * 60));
+  let sekundy = Math.floor((odleglosc % (1000 * 60)) / 1000);
+  document.getElementById("odliczanie").innerHTML = dni + "d " + godziny + "h " + minuty + "m " + sekundy + "s ";
+  if (odleglosc < 0) {
+    clearInterval(x);
+    document.getElementById("odliczanie").innerHTML = "Zakończone!";
+  }
+}, 1000);
+</script>
+</div>
+
 
 <div class="footer">
     © 2026 Wiktor Uścinowicz
